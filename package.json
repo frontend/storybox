@@ -19,6 +19,7 @@
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
     "@storybook/react": "^6.1.11",
+    "@whitespace/storybook-addon-html": "^4.0.2",
     "babel-loader": "^8.2.2"
   }
 }
