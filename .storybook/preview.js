@@ -1,3 +1,4 @@
+import '!style-loader!css-loader!./../build/styles.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

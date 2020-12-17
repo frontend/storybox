@@ -6,12 +6,25 @@
   "author": "github/frontend",
   "license": "MIT",
   "scripts": {
-    "storybook": "NODE_PATH=src start-storybook -p 6006",
-    "build-storybook": "NODE_PATH=src build-storybook"
+    "clean": "rm -rf node_modules/.cache",
+    "tailwind:dev": "postcss src/styles/base.css -o build/styles.css",
+    "tailwind:build": "export NODE_ENV=production && yarn run tailwind:dev",
+    "tailwind:watch": "chokidar \"src/**/*.css\" \"tailwind.config.js\" -c \"yarn run tailwind:dev\"",
+    "tailwind:start": "yarn run tailwind:dev && yarn run tailwind:watch",
+    "storybook:start": "yarn run clean && NODE_PATH=src start-storybook -s ./build -p 6006",
+    "storybook:build": "NODE_PATH=src build-storybook",
+    "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
+    "build": "yarn tailwind:build"
   },
   "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.1",
+    "postcss-import": "^14.0.0",
+    "postcss-nested": "^5.0.3",
+    "postcss-preset-env": "^6.7.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -19,7 +32,12 @@
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
     "@storybook/react": "^6.1.11",
+    "@storybook/theming": "^6.1.11",
     "@whitespace/storybook-addon-html": "^4.0.2",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "chokidar-cli": "^2.1.0",
+    "concurrently": "^5.3.0",
+    "css-loader": "^5.0.1",
+    "postcss-cli": "^8.3.1"
   }
 }

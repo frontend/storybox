@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Button from 'components/atoms/Button';
-import './Header.css';
 
 const Header = (): JSX.Element => (
   <header>

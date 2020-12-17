@@ -1,5 +1,4 @@
 import React from 'react';
-import './Button.css';
 
 type Props = {
   primary?: boolean,
