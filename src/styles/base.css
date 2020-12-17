@@ -1,6 +1,12 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "../components/atoms/Button/Button.css";
-@import "../components/organisms/Header/Header.css";
+
+/* ATOMS */
+
+/* MOLECULES */
+
+/* ORGANISMS */
+
+/* PAGES */
 @import "../components/pages/Homepage/Page.css";

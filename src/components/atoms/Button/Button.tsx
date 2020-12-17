@@ -8,11 +8,10 @@ type Props = {
 }
 
 const Button = ({ primary, size, label, ...props }: Props): JSX.Element => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
       {...props}
     >
       {label}

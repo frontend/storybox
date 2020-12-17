@@ -15,7 +15,7 @@
     "storybook:build": "NODE_PATH=src build-storybook",
     "modules:build": "webpack",
     "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
-    "build": "yarn tailwind:build"
+    "build": "yarn tailwind:build && yarn run modules:build"
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",
