@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 
 /* ATOMS */
+@import "../components/atoms/Blank/Blank.css";
 
 /* MOLECULES */
 
