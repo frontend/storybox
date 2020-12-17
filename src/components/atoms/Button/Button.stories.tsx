@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Button from './Button';
+import Button, { Props } from './Button';
 
 export default {
   title: 'Atoms/Button',
   component: Button,
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args: Props) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -17,12 +17,6 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
   label: 'Button',
 };
 
