@@ -7,16 +7,19 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "lib": [ "dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
+    "noEmit": false,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
+    "rootDir": "src",
     "skipLibCheck": true,
+    "sourceMap": true,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "outDir": "./build/"
   },
   "include": [
     "**/*.ts",
@@ -24,6 +27,7 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.stories.*"
+    "**/*.stories.*",
+    "build"
   ]
 }
