@@ -1,0 +1,18 @@
+.icon {
+  @apply inline-flex;
+  @apply self-center;
+  @apply justify-center;
+  @apply items-center;
+  @apply relative;
+  top: -0.1em;
+  width: 1em;
+  height: 1em;
+  font-size: 0.7em;
+  color: inherit;
+
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+}

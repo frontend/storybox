@@ -1,3 +1,7 @@
+import React from "react";
+
+import ReactComment from './comment';
+import Icons from '../src/components/atoms/Icons';
 import '!style-loader!css-loader!./../build/styles.css';
 
 export const parameters = {
@@ -14,3 +18,23 @@ export const parameters = {
     },
   },
 }
+
+export const decorators = [
+  (Story) => (
+    <>
+      <Story />{`
+
+      `}
+<ReactComment text={`
+
+
+
+
+
+
+
+👇 =========================== Icons sprite =========================== 👇`}/>
+      <Icons />
+    </>
+  ),
+];

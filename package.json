@@ -35,6 +35,7 @@
     "@storybook/addon-links": "^6.1.11",
     "@storybook/react": "^6.1.11",
     "@storybook/theming": "^6.1.11",
+    "@svgr/webpack": "^5.5.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@whitespace/storybook-addon-html": "^4.0.2",
