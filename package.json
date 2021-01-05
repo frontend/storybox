@@ -16,6 +16,7 @@
     "modules:build": "webpack",
     "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
     "build": "yarn tailwind:build && yarn run modules:build",
+    "build:styleguide": "yarn tailwind:build && yarn run storybook:build",
     "generate": "npx generact"
   },
   "dependencies": {
