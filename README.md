@@ -2,7 +2,7 @@
 
 > Storybook-Tailwind distribution for Styleguide projects
 
-*If you're just to lazy to read the README  😏👉 `npx frontend-storybox*
+*If you're just to lazy to read the README  😏👉 `npx frontend-storybox`*
 
 Currently **provides**:
 - [🌊 Tailwind](https://tailwindcss.com/)
@@ -29,7 +29,7 @@ $ git checkout tsconfig.json
 
 ## 🏁 Run the Project
 
-Start the following commands in parallel (with nicer output):
+Start the following commands **in parallel** (with nicer output):
 
 ```bash
 $ yarn tailwind:start
