@@ -8,7 +8,9 @@ export type Props = {
 };
 
 const Button = ({ primary, size, label, ...props }: Props): JSX.Element => {
-  const color = primary ? 'indigo' : 'gray';
+  const colors = primary
+    ? 'bg-indigo-600 hover:bg-indigo-700'
+    : 'bg-gray-600 hover:bg-gray-700';
 
   const paddings = () => {
     switch (size) {
@@ -23,7 +25,7 @@ const Button = ({ primary, size, label, ...props }: Props): JSX.Element => {
   return (
     <button
       type="button"
-      className={`inline-flex items-center justify-center ${paddings()} text-base font-medium text-white bg-${color}-600 border border-transparent rounded-md hover:bg-${color}-700`}
+      className={`inline-flex items-center justify-center ${paddings()} ${colors} text-base font-medium text-white border border-transparent rounded-md`}
       {...props}
     >
       {label}
