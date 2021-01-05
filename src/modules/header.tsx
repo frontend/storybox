@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Header from 'components/organisms/Header';
+import Icon from 'components/atoms/Icon';
 
 const root = document.getElementById('uww-grid');
 
-ReactDOM.render(<Header {...(root?.dataset)} />, root)
+ReactDOM.render(<Icon {...root?.dataset} />, root);
