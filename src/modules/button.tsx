@@ -16,7 +16,7 @@ ReactDOM.render(<Button {...data} />, root);
 //   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
 // </head>
 // <body>
-//   <div id="sb-button" data-size="small" data-label="My button"></div>
+//   <div id="sb-button" data-size="small" data-label="My button"></div> <!-- bad idea ^^' -->
 //   <script src="button.bundle.js"></script>
 // </body>
 // </html>
