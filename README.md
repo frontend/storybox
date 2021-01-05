@@ -1,4 +1,4 @@
-# Storybox
+# 📚 Storybox
 
 > Storybook-Tailwind distribution for Styleguide projects
 
