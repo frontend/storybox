@@ -13,7 +13,7 @@ Currently **provides**:
 
 ### [👉  Live Demo](https://frontend-storybox.netlify.app)
 
-### [🔢  Want to upgrade your projet?](./MIGRATION_GUIDE.md)
+### [🔢  Want to upgrade your current project?](./MIGRATION_GUIDE.md)
 
 ## 🎉 New Styleguide
 
