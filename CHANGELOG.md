@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="0.0.2"></a>
+## 0.0.2 (2021-01-06)
+
+### Added
+
+- ✨ add Storybox version and migration guide [[a1bd747](https://github.com/frontend/storybox/commit/a1bd747b8b9dc399ee26b8339937978b62921510)]
+
+### Changed
+
+- ♻️ improve IconsDecorator usage to be less mandatory [[83378ca](https://github.com/frontend/storybox/commit/83378caa4f68dcbd3d3bcf547682e9200f1f387c)]
+
+### Miscellaneous
+
+- 📝 add Changelog [[c5462ce](https://github.com/frontend/storybox/commit/c5462cee7f1e9702f5c8bb9fdccfd81958e1bc55)]
+
+
 <a name="0.0.1"></a>
 ## 0.0.1 (2021-01-05)
 
