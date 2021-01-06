@@ -1,1 +1,1 @@
-export { default } from './Icons';
+export { default, IconsDecorator } from './Icons';

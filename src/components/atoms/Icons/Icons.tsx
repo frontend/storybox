@@ -20,3 +20,16 @@ const Icons = (): JSX.Element => (
 );
 
 export default Icons;
+
+export const IconsDecorator = (Story: FunctionComponent): JSX.Element => (
+  <>
+    <Story />
+    {`
+      
+      `}
+    <span hidden>
+      👇 =========================== Icons sprite =========================== 👇
+    </span>
+    <Icons />
+  </>
+);

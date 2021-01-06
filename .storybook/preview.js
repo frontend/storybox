@@ -1,6 +1,6 @@
 import React from "react";
 
-import Icons from '../src/components/atoms/Icons';
+import { IconsDecorator } from '../src/components/atoms/Icons';
 import '!style-loader!css-loader!./../build/styles.css';
 
 export const parameters = {
@@ -19,13 +19,5 @@ export const parameters = {
 }
 
 export const decorators = [
-  (Story) => (
-    <>
-      <Story />{`
-      
-      `}
-      <span hidden>👇 =========================== Icons sprite =========================== 👇</span>
-      <Icons />
-    </>
-  ),
+  // IconsDecorator,
 ];
