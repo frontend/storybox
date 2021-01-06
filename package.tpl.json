@@ -1,6 +1,7 @@
 {
   "name": "my-styleguide",
   "version": "0.0.1",
+  "storyboxVersion": "0.0.1",
   "description": "A brand new styleguide project",
   "author": "you",
   "scripts": {
