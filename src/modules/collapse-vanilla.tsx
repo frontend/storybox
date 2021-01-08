@@ -5,21 +5,12 @@ document.addEventListener('DOMContentLoaded', () => toggleCollapse());
 // Can be used like so:
 // <head>
 //   <link rel="stylesheet" href="styles.css">
+//   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.1/umd/react.production.min.js" ></script>
+//   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
 // </head>
 // <body>
-//   <button
-//     type="button"
-//     class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-base font-medium text-white border border-transparent rounded-md"
-//     aria-expanded="false"
-//     aria-controls="collapse-example"
-//     data-collapse-target="collapse-example"
-//   >
-//     More content
-//   </button>
-//   <div id="collapse-example" class="collapse">
-//     <p class="py-3">
-//       [...]
-//     </p>
+//   <div class="sb-collapse" data-label="Click me">
+//     [HTML content]
 //   </div>
-//   <script src="collapse-vanilla.bundle.js"></script>
+//   <script src="./collapse-react.bundle.js"></script>
 // </body>

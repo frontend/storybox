@@ -3,8 +3,7 @@ import React from 'react';
 import CollapseVanilla from './CollapseVanilla';
 
 const doc = `
-
-Collapse (vanilla) is a zero-dependency JavaScript widget. To use it in your project, follow those steps:
+Collapse (vanilla) is a zero-dependency JavaScript widget. To use it in your project, follow these steps:
 
 **1**. Include the styles in the \`<head>\`:
 
@@ -12,7 +11,7 @@ Collapse (vanilla) is a zero-dependency JavaScript widget. To use it in your pro
 <link rel="stylesheet" href="styles.css">
 \`\`\`
 
-**2**. Include the following script before \`<body>\` tag's closing:
+**2**. Include the following bundle before \`<body>\` tag's closing:
 
 \`\`\`html
 <script src="collapse-vanilla.bundle.js"></script>
