@@ -7,6 +7,7 @@
 @import "../components/atoms/Icon/Icon.css";
 
 /* MOLECULES */
+@import "../components/molecules/CollapseVanilla/CollapseVanilla.css";
 
 /* ORGANISMS */
 

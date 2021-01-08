@@ -3,11 +3,11 @@ import React from 'react';
 export type Props = {
   primary?: boolean;
   size?: 'small' | 'medium';
-  label: string;
+  children: string;
   onClick?: () => void;
 };
 
-const Button = ({ primary, size, label, ...props }: Props): JSX.Element => {
+const Button = ({ primary, size, children, ...props }: Props): JSX.Element => {
   const colors = primary
     ? 'bg-indigo-600 hover:bg-indigo-700'
     : 'bg-gray-600 hover:bg-gray-700';
@@ -28,7 +28,7 @@ const Button = ({ primary, size, label, ...props }: Props): JSX.Element => {
       className={`inline-flex items-center justify-center ${paddings()} ${colors} text-base font-medium text-white border border-transparent rounded-md`}
       {...props}
     >
-      {label}
+      {children}
     </button>
   );
 };

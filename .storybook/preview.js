@@ -26,9 +26,9 @@ export const parameters = {
       <>
         <Title />
         <Subtitle />
-        <Description />
         <Primary />
         {/* <ArgsTable story={PRIMARY_STORY} /> */}
+        <Description />
         <Stories />
       </>
     ),
