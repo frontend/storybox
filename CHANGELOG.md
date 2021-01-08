@@ -1,18 +1,23 @@
 # Changelog
 
-<a name="0.0.2"></a>
-## 0.0.2 (2021-01-06)
+<a name="0.0.3"></a>
+## 0.0.3 (2021-01-08)
 
 ### Added
 
+- ✨ add React module example [[df0a1db](https://github.com/frontend/storybox/commit/df0a1db64e3ec5af7a562334364651385e35f761)]
+- ✨ add Vanilla module example [[fcd184d](https://github.com/frontend/storybox/commit/fcd184d18c7b9be89723b311045d21dda9a7dd1d)]
 - ✨ add Storybox version and migration guide [[a1bd747](https://github.com/frontend/storybox/commit/a1bd747b8b9dc399ee26b8339937978b62921510)]
 
 ### Changed
 
+- 🚸 improve UX with Docs tab by default with hidden props table [[99a52f1](https://github.com/frontend/storybox/commit/99a52f12007263816bb9ff85e472f6e8f90b34b4)]
 - ♻️ improve IconsDecorator usage to be less mandatory [[83378ca](https://github.com/frontend/storybox/commit/83378caa4f68dcbd3d3bcf547682e9200f1f387c)]
 
 ### Miscellaneous
 
+-  Update README.md [[277cadf](https://github.com/frontend/storybox/commit/277cadfc1ff73b154c355ab3b2354bc7b81f8a1a)]
+- 📝 update CHANGELOG [[274959f](https://github.com/frontend/storybox/commit/274959f3442e75e1f5191c6db9287c4ebcea2082)]
 - 📝 add Changelog [[c5462ce](https://github.com/frontend/storybox/commit/c5462cee7f1e9702f5c8bb9fdccfd81958e1bc55)]
 
 
