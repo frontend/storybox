@@ -1,14 +1,17 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-webpack-loader-syntax */
 /* eslint-disable react/no-danger */
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, SVGProps } from 'react';
 
-import External from 'assets/icons/external.svg';
-import Home from 'assets/icons/home.svg';
+import { ReactComponent as external } from 'assets/icons/external.svg';
+import { ReactComponent as home } from 'assets/icons/home.svg';
 
-export const iconList: Record<string, FunctionComponent<{ id: string }>> = {
-  home: Home,
-  external: External,
+export const iconList: Record<
+  string,
+  FunctionComponent<SVGProps<SVGSVGElement>>
+> = {
+  home,
+  external,
 };
 
 const Icons = (): JSX.Element => (

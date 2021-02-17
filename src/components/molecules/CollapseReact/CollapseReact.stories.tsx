@@ -16,7 +16,7 @@ Collapse (react) is a React widget. To use it in your project, follow these step
 \`\`\`html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.1/umd/react.production.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js"></script>
-<script src="collapse-vanilla.bundle.js"></script>
+<script src="collapse-react.bundle.js"></script>
 \`\`\`
 
 **3**. Use it like so:
