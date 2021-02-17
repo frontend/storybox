@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="0.0.4"></a>
+## 0.0.4 (2021-02-17)
+
+### Changed
+
+- 🎨 improve Icons doc and add base doc pages [[3ceae75](https://github.com/frontend/storybox/commit/3ceae758d4fb213f20ec993eb1aededffd8436ec)]
+
+### Miscellaneous
+
+- 📝 update changelog [[6b7baca](https://github.com/frontend/storybox/commit/6b7baca6d09afa3f9e2ca03f3a6e1828109124ad)]
+
+
 <a name="0.0.3"></a>
 ## 0.0.3 (2021-01-08)
 
