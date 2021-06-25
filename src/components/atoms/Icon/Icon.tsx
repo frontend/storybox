@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { IconNames } from 'components/atoms/Icons/Icons';
+
 export type Props = {
-  name?: string;
+  name?: IconNames;
 };
 
-const Icon = ({ name }: Props): JSX.Element => (
+const Icon = ({ name = 'home' }: Props): JSX.Element => (
   <>
     <svg className={`icon icon-${name}`} aria-hidden="true">
       <use xlinkHref={`#${name}`} />
@@ -12,8 +14,6 @@ const Icon = ({ name }: Props): JSX.Element => (
   </>
 );
 
-Icon.defaultProps = {
-  name: 'home',
-};
+Icon.defaultProps = {};
 
 export default Icon;

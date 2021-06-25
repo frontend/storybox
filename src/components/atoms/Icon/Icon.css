@@ -1,9 +1,5 @@
 .icon {
-  @apply inline-flex;
-  @apply self-center;
-  @apply justify-center;
-  @apply items-center;
-  @apply relative;
+  @apply inline-flex self-center justify-center items-center relative;
   top: -0.1em;
   width: 1em;
   height: 1em;
