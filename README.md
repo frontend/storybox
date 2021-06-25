@@ -26,8 +26,10 @@ $ npx frontend-storybox@latest
 
 If you want a good ESLint/Prettier/Cypress/Jest config, you can use the [Antistatique Frontend Development Configuration](https://github.com/antistatique/frontend-development-configuration) as so:
 
+⚠️ Make sure everything has been added/commited before doind this
+
 ```bash
-$ npx antistatique-frontend@latest # Uncheck storybook, obviously
+$ npx antistatique-frontend@latest # Uncheck storybook and check stylelint, obviously
 $ git checkout tsconfig.json
 ```
 
