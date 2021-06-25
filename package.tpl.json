@@ -6,10 +6,8 @@
   "author": "you",
   "scripts": {
     "clean": "rm -rf node_modules/.cache",
-    "tailwind:dev": "postcss src/styles/base.css -o build/styles.css",
-    "tailwind:build": "export NODE_ENV=production && yarn run tailwind:dev",
-    "tailwind:watch": "chokidar \"src/**/*.css\" \"tailwind.config.js\" -c \"yarn run tailwind:dev\"",
-    "tailwind:start": "yarn run tailwind:dev && yarn run tailwind:watch",
+    "tailwind:build": "export NODE_ENV=production && npx tailwindcss -i ./src/styles/base.css -o ./build/styles.css  --minify --purge='./src/**/*.tsx' --postcss",
+    "tailwind:start": "npx tailwindcss -i ./src/styles/base.css -o ./build/styles.css --watch --jit --purge='./src/**/*.tsx' --postcss",
     "storybook:start": "yarn run clean && NODE_PATH=src start-storybook -s ./build -p 6006",
     "storybook:build": "NODE_PATH=src build-storybook",
     "modules:build": "webpack",
