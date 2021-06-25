@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="0.1.1"></a>
+## 0.1.1 (2021-06-25)
+
+### Added
+
+- ✨ add generated .gitignore [[87d2a8b](https://github.com/frontend/storybox/commit/87d2a8bb4787b0fbc8d4a8e834a1a56f5144fca6)]
+
+### Miscellaneous
+
+- 📝 improve README [[6f68261](https://github.com/frontend/storybox/commit/6f682619c6b38d08646b884da3a689c09106c5e3)]
+
+
 <a name="0.1.0"></a>
 ## 0.1.0 (2021-06-25)
 
