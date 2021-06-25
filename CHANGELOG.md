@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="1.0.2"></a>
+## 1.0.2 (2021-06-25)
+
+### Changed
+
+- 🔧 update npm scripts [[cf53ad8](https://github.com/frontend/storybox/commit/cf53ad88af059700366592a0a4d00afb6f3cfe6a)]
+
+
 <a name="1.0.1"></a>
 ## 1.0.1 (2021-06-25)
 
