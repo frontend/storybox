@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="0.1.0"></a>
+## 0.1.0 (2021-06-25)
+
+### Changed
+
+- 🎨 improve icon system and tailwind tasks [[9f17dc4](https://github.com/frontend/storybox/commit/9f17dc42b1ed8046673adfca5f025832023ad7f1)]
+- ⚡ improve storyboox start/refresh time [[69a22d7](https://github.com/frontend/storybox/commit/69a22d72c9bcaee9fb0a49de11000d6b5487e11c)]
+- ⬆️ rough update of dependencies and configs [[633a1a2](https://github.com/frontend/storybox/commit/633a1a2b52121c2b35f3991ab9dae9db1b53b42f)]
+
+### Miscellaneous
+
+- 📝 update changelog [[0a69fa8](https://github.com/frontend/storybox/commit/0a69fa848aaa124600e125e749e0ac01db84e46a)]
+
+
 <a name="0.0.4"></a>
 ## 0.0.4 (2021-02-17)
 
