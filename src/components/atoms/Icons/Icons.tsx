@@ -1,23 +1,28 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-webpack-loader-syntax */
 /* eslint-disable react/no-danger */
-import React, { FunctionComponent, SVGProps } from 'react';
+import React, { FunctionComponent, SVGAttributes } from 'react';
 
-import { ReactComponent as external } from 'assets/icons/external.svg';
-import { ReactComponent as home } from 'assets/icons/home.svg';
+import External from 'assets/icons/external.svg';
+import Home from 'assets/icons/home.svg';
 
-export const iconList: Record<
-  string,
-  FunctionComponent<SVGProps<SVGSVGElement>>
-> = {
-  home,
-  external,
+export const iconList: Record<string, unknown> = {
+  home: Home,
+  external: External,
 };
+
+export type IconNames = 'home' | 'external';
 
 const Icons = (): JSX.Element => (
   <div style={{ display: 'none' }}>
     {Object.keys(iconList).map(icon =>
-      React.createElement(iconList[icon], { key: icon, id: icon })
+      React.createElement<SVGAttributes<SVGAElement>>(
+        iconList[icon] as FunctionComponent,
+        {
+          key: icon,
+          id: icon.replace(/_/gm, '-'),
+        }
+      )
     )}
   </div>
 );

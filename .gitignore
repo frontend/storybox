@@ -28,5 +28,6 @@ yarn-error.log*
 .eslintrc
 .github/
 .huskyrc
+.husky
 .lintstagedrc
 .vscode/
