@@ -1,7 +1,7 @@
 {
   "name": "frontend-storybox",
-  "version": "1.0.2",
-  "storyboxVersion": "1.0.2",
+  "version": "1.0.3",
+  "storyboxVersion": "1.0.3",
   "description": "Storybook distribution for styleguide as a deliverable",
   "author": "github/frontend",
   "license": "MIT",
@@ -9,6 +9,9 @@
   "bin": {
     "antistatique-frontend": ".bin/init.js",
     "init": ".bin/init.js"
+  },
+  "chan": {
+    "release-prefix": ""
   },
   "scripts": {
     "clean": "rm -rf node_modules/.cache",
