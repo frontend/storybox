@@ -15,6 +15,7 @@ const entry = modules.reduce(
 
 module.exports = {
   entry,
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].bundle.js',

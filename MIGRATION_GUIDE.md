@@ -1,5 +1,19 @@
 # Migration Guide
 
+## 1.0.2 → 1.0.3
+
+1. Upgrade all your dependencies `$ yarn upgrade-interactive --latest`
+2. Remove `css-loader` (`$ yarn remove css-loader`)
+3. Ensure Webpack 5 (`$ yarn add webpack --dev`)
+4. In `webpack.congif.js`, add after line 17: `mode: 'production',`
+5. Remove in `.storybook/preview.js`: `import '!style-loader!css-loader!./../build/styles.css';`
+6. Add in `.storybook/preview-head.html`: `<link rel="stylesheet" href="/styles.css" />`
+7. Update your NPM scripts to something like:
+  ```diff
+  -    "storybook:build": "NODE_PATH=src build-storybook",
+  +    "storybook:build": "NODE_PATH=src build-storybook && cp ./build/styles.css ./storybook-static",
+  ```
+
 ## 0.0.4 → 1.0.2
 
 1. Remove `chokidar-cli` and `postcss-cli` dependencies

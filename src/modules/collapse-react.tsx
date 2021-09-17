@@ -7,7 +7,7 @@ import { Props } from 'components/molecules/CollapseReact/CollapseReact';
 const roots = document.querySelectorAll('.sb-collapse');
 roots.forEach(root => {
   if (root instanceof HTMLElement) {
-    const data = root?.dataset as Props;
+    const data = root?.dataset as unknown as Props;
     const content = root?.innerHTML;
     ReactDOM.render(<CollapseReact {...data}>{content}</CollapseReact>, root);
   }

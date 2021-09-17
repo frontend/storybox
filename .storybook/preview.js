@@ -10,7 +10,6 @@ import {
 } from '@storybook/addon-docs/blocks';
 
 import { IconsDecorator } from '../src/components/atoms/Icons';
-import '!style-loader!css-loader!./../build/styles.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
