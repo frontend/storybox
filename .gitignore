@@ -26,6 +26,7 @@ yarn-error.log*
 
 # Antistatique Frontend Development Configuration
 .eslintrc
+.stylelintrc
 .github/
 .huskyrc
 .husky

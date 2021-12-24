@@ -6,7 +6,7 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "react",
     "lib": [ "dom", "dom.iterable", "esnext"],
     "module": "esnext",

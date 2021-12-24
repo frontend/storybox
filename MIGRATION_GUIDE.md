@@ -1,5 +1,45 @@
 # Migration Guide
 
+## 1.0.3 → 1.1.0
+1. Add the new `"modules:start": "webpack --watch",` NPM script
+2. Remove `postcss-nested` dependencies
+3. Update your devDependencies
+4. Udapte your `postcss.config.js` with something like
+  ```js
+  module.exports = {
+    plugins: {
+      'postcss-import': {},
+      'tailwindcss/nesting': {},
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  };
+  ```
+5. In your colors documentation, use the Tailwind config like:
+  ```tsx
+  import resolveConfig from 'tailwindcss/resolveConfig';
+
+  resolveConfig(tailwindConfig).theme.colors
+  ```
+6. Create a dedicated `tailwind.css` file to import first from `base.css` with
+  ```
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  ```
+7. Update your `tailwind.config.js` with something like
+  ```js
+  module.exports = {
+    important: true,
+    content: ['./src/**/*.{jsx,tsx,html,twig}'],
+    theme: {
+      extend: {...},
+    },
+    plugins: [...],
+  };
+  ```
+8. In your `tsconfig.json`, change `"isolatedModules": false,`
+
 ## 1.0.2 → 1.0.3
 
 1. Upgrade all your dependencies `$ yarn upgrade-interactive --latest`

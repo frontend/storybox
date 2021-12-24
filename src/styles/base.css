@@ -1,6 +1,4 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "./tailwind.css";
 
 /* ATOMS */
 @import "../components/atoms/Blank/Blank.css";
@@ -13,6 +11,5 @@
 
 /* PAGES */
 @import "../components/pages/Homepage/Homepage.css";
-
 
 /* 👇 FONT-FACE 👇 ---------------------------------------------- */

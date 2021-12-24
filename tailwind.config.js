@@ -1,9 +1,8 @@
-// eslint-disable-next-line
-const defaultTheme = require('tailwindcss/defaultTheme');
-
 module.exports = {
-  purge: ['./src/**/*.tsx'],
+  important: true,
+  content: ['./src/**/*.{jsx,tsx,html,twig}'],
   theme: {
-    ...defaultTheme,
+    extend: {},
   },
+  plugins: [],
 };
