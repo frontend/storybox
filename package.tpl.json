@@ -1,7 +1,7 @@
 {
   "name": "my-styleguide",
   "version": "0.0.1",
-  "storyboxVersion": "1.0.2",
+  "storyboxVersion": "1.0.3",
   "description": "A brand new styleguide project",
   "author": "you",
   "scripts": {
@@ -9,7 +9,7 @@
     "tailwind:build": "export NODE_ENV=production && npx tailwindcss -i ./src/styles/base.css -o ./build/styles.css  --minify --purge='./src/**/*.tsx' --postcss",
     "tailwind:start": "npx tailwindcss -i ./src/styles/base.css -o ./build/styles.css --watch --jit --purge='./src/**/*.tsx' --postcss",
     "storybook:start": "yarn run clean && NODE_PATH=src start-storybook -s ./build -p 6006",
-    "storybook:build": "NODE_PATH=src build-storybook",
+    "storybook:build": "NODE_PATH=src build-storybook && cp ./build/styles.css ./storybook-static",
     "modules:build": "webpack",
     "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
     "build": "yarn tailwind:build && yarn run modules:build",
@@ -17,30 +17,30 @@
     "generate": "npx generact"
   },
   "dependencies": {
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.5",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-preset-env": "^7.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^3.0.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.3.0",
-    "@storybook/addon-essentials": "^6.3.0",
-    "@storybook/addon-links": "^6.3.0",
-    "@storybook/react": "^6.3.0",
-    "@storybook/theming": "^6.3.0",
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
+    "@storybook/theming": "^6.3.8",
     "@svgr/webpack": "^5.5.0",
-    "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.8",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "@whitespace/storybook-addon-html": "^5.0.0",
-    "concurrently": "^6.2.0",
+    "concurrently": "^6.5.1",
     "css-loader": "^5.2.6",
-    "ts-loader": "^9.2.3",
-    "typescript": "^4.3.4",
-    "webpack-cli": "^4.7.2"
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack-cli": "^4.8.0"
   }
 }
