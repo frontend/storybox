@@ -1,7 +1,7 @@
 {
   "name": "frontend-storybox",
-  "version": "1.1.0",
-  "storyboxVersion": "1.0.3",
+  "version": "1.1.1",
+  "storyboxVersion": "1.1.1",
   "description": "Storybook distribution for styleguide as a deliverable",
   "author": "github/frontend",
   "license": "MIT",
