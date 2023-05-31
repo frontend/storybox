@@ -1,5 +1,5 @@
-import { Story, Canvas, Meta, Title, Primary, Controls, Stories, Source } from '@storybook/blocks';
-import BlankStories from '../Blank.stories';
+import { Story, Canvas, Meta, Title, Primary, Controls, Stories } from '@storybook/blocks';
+import * as Blank from './Blank.stories.tsx';
 
 <Meta isTemplate />
 
@@ -15,10 +15,15 @@ The component accepts the following inputs (props):
 
 ## Default
 <Canvas>
-  <Story/>
+  <Story of={Blank.Default}/>
 </Canvas>
 
-## Variations
+## Active
+<Canvas>
+  <Story of={Blank.Active}/>
+</Canvas>
+
+## All Variations
 
 Listed below are all the variations of this component.
 

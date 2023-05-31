@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import doc from './doc/Blank.mdx';
+import type {Meta, StoryObj} from '@storybook/react';
+import doc from './Blank.mdx';
 
 import Blank from "./Blank";
 
@@ -26,8 +26,8 @@ export const Default: Story = {
   },
   parameters: {
     docs: {
-      story: { inline: true }, // render the story in an iframe
-      canvas: { sourceState: 'shown' }, // start with the source open
+      story: {inline: true}, // render the story in an iframe
+      canvas: {sourceState: 'shown'}, // start with the source open
     },
   },
 };
