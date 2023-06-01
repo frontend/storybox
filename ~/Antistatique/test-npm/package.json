@@ -1,0 +1,50 @@
+{
+  "name": "my-styleguide",
+  "displayName": "📖 Storybox",
+  "version": "0.0.1",
+  "storyboxVersion": "2.0.0",
+  "description": "A brand new styleguide project",
+  "author": "you",
+  "scripts": {
+    "clean": "rm -rf node_modules/.cache",
+    "tailwind:build": "export NODE_ENV=production && npx tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --minify",
+    "tailwind:start": "npx tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --watch",
+    "storybook:start": "yarn run clean && storybook dev --no-open -p 6006",
+    "storybook:build": "storybook build",
+    "modules:build": "rollup --config",
+    "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
+    "build": "yarn build:assets",
+    "build:styleguide": "yarn build:assets && yarn storybook:build",
+    "build:assets": "yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli add public/ > public/tl-styleguide-assets.zip",
+    "generate": "npx generact"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "clsx": "^1.2.1",
+    "glob": "^10.2.6",
+    "postcss": "^8.4.23",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
+    "@storybook/theming": "^6.3.8",
+    "@svgr/webpack": "^5.5.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "concurrently": "^6.5.1",
+    "css-loader": "^5.2.6",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack-cli": "^4.8.0"
+  }
+}

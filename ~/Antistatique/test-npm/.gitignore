@@ -1,3 +1,4 @@
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -10,9 +11,6 @@
 
 # production
 /build
-/public/css
-/public/javascript
-/public/*.zip
 /dist
 /storybook-static
 
@@ -23,31 +21,6 @@
 .env.test.local
 .env.production.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-.idea
-
-# Antistatique Frontend Development Configuration
-.eslintrc
-.stylelintrc
-.github/
-.huskyrc
-.husky
-.lintstagedrc
-.vscode/
-

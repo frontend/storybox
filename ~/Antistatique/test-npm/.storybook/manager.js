@@ -26,7 +26,7 @@ addons.setConfig({
     ...themes.normal,
     base: 'light',
     brandTitle: `${ displayName } (${ version })`,
-    brandUrl: '/',
+    brandUrl: url,
     colorSecondary: '#FB0299',
     appBorderRadius: 10,
   },
