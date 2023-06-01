@@ -1,3 +1,6 @@
+import { string } from 'rollup-plugin-string';
+import { mergeConfig } from 'vite';
+
 import type { StorybookConfig } from "@storybook/react-vite";
 const config: StorybookConfig = {
   stories: [
@@ -19,6 +22,18 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
     defaultName: "Documentation",
+  },
+  core: {
+    builder: '@storybook/builder-vite',
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      plugins: [
+        string({
+          include: '**/*.html',
+        }),
+      ]
+    });
   },
 };
 export default config;

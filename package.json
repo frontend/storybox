@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "@types/prettier": "^2.7.2",
+    "alpinejs": "^3.12.2",
     "autoprefixer": "^10.4.14",
     "clsx": "^1.2.1",
     "glob": "^10.2.6",
@@ -63,6 +64,7 @@
     "@storybook/addon-interactions": "^7.0.17",
     "@storybook/addon-links": "^7.0.17",
     "@storybook/blocks": "^7.0.17",
+    "@storybook/builder-vite": "^7.0.18",
     "@storybook/manager-api": "^7.0.17",
     "@storybook/react": "^7.0.17",
     "@storybook/react-vite": "^7.0.17",
@@ -100,6 +102,7 @@
     "prettier-plugin-twig-melody": "^0.4.6",
     "prop-types": "^15.8.1",
     "rollup": "^3.23.0",
+    "rollup-plugin-string": "^3.0.0",
     "storybook": "^7.0.17",
     "typescript": "^5.0.4",
     "vite": "^4.3.2"

@@ -9,7 +9,7 @@ const renderHtml = function(component) {
     parser: 'html',
     plugins: [prettierHtml],
     htmlWhitespaceSensitivity: 'ignore',
-  });
+  }).replace(/&#x27;/g, "'").replace(/&amp;/g, "&");
 };
 
 const preview = {
