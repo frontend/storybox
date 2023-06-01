@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import {ComponentWrapper} from "../../storybook/HtmlComment";
+import { ComponentWrapper } from '../../storybook/HtmlComment';
 
 export type Props = {
   active: boolean;
@@ -9,7 +9,9 @@ export type Props = {
 
 const Blank = ({ active }: Props) => (
   <ComponentWrapper name="Blank">
-    <span className={clsx('blank', active && 'blank-active')}>Blank component</span>
+    <span className={clsx('blank', active && 'blank-active')}>
+      Blank component
+    </span>
   </ComponentWrapper>
 );
 

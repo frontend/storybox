@@ -1,7 +1,7 @@
 import { createElement } from 'react';
-import ReactDomServer from 'react-dom/server';
-import prettierHtml from 'prettier/parser-html';
-import prettier from 'prettier/standalone';
+import * as ReactDomServer from 'react-dom/server';
+import * as prettierHtml from 'prettier/parser-html';
+import * as prettier from 'prettier/standalone';
 
 const renderHtml = function(component) {
   return prettier.format(ReactDomServer.renderToStaticMarkup(component).
@@ -11,6 +11,7 @@ const renderHtml = function(component) {
     htmlWhitespaceSensitivity: 'ignore',
   });
 };
+
 const preview = {
   parameters: {
     actions: {argTypesRegex: '^on[A-Z].*'},

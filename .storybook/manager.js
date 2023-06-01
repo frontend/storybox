@@ -1,15 +1,33 @@
-import { addons } from '@storybook/addons';
+import { addons } from '@storybook/manager-api';
 import { themes } from '@storybook/theming';
-import { version, displayName, url  } from '../package.json';
+import { version, displayName, url } from '../package.json';
 
 addons.setConfig({
+  isFullscreen: false,
+  showNav: true,
+  showPanel: true,
+  panelPosition: 'bottom',
+  enableShortcuts: true,
+  showToolbar: true,
+  selectedPanel: undefined,
+  initialActive: 'sidebar',
+  sidebar: {
+    showRoots: true,
+    collapsedRoots: ['other'],
+  },
+  toolbar: {
+    title: {hidden: false},
+    zoom: {hidden: false},
+    eject: {hidden: false},
+    copy: {hidden: false},
+    fullscreen: {hidden: false},
+  },
   theme: {
     ...themes.normal,
-    brandTitle: `${displayName} (${version})`,
     base: 'light',
-    colorSecondary: '#266FAC',
-    barSelectedColor: '#266FAC',
-    barTextColor: 'black',
+    brandTitle: `${ displayName } (${ version })`,
     brandUrl: url,
+    colorSecondary: '#FB0299',
+    appBorderRadius: 10,
   },
 });
