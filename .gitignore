@@ -40,5 +40,14 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
 .idea
+
+# Antistatique Frontend Development Configuration
+.eslintrc
+.stylelintrc
+.github/
+.huskyrc
+.husky
+.lintstagedrc
+.vscode/
+

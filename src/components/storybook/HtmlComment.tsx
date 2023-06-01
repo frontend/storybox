@@ -12,7 +12,13 @@ const HtmlComment = ({ children }: { children: React.ReactNode }) => (
   />
 );
 
-export const ComponentWrapper = ({ name, children }: { name: string; children: React.ReactNode }) => (
+export const ComponentWrapper = ({
+  name,
+  children,
+}: {
+  name: string;
+  children: React.ReactNode;
+}) => (
   <>
     <HtmlComment>{`${name} Start`}</HtmlComment>
     {children}

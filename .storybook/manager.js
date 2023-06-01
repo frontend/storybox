@@ -1,6 +1,6 @@
 import { addons } from '@storybook/manager-api';
 import { themes } from '@storybook/theming';
-import { version, displayName, url } from '../package.json';
+import { version, displayName } from '../package.json';
 
 addons.setConfig({
   isFullscreen: false,
@@ -26,7 +26,7 @@ addons.setConfig({
     ...themes.normal,
     base: 'light',
     brandTitle: `${ displayName } (${ version })`,
-    brandUrl: url,
+    brandUrl: '/',
     colorSecondary: '#FB0299',
     appBorderRadius: 10,
   },

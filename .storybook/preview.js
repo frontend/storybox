@@ -1,7 +1,7 @@
 import { createElement } from 'react';
-import * as ReactDomServer from 'react-dom/server';
-import * as prettierHtml from 'prettier/parser-html';
-import * as prettier from 'prettier/standalone';
+import ReactDomServer from 'react-dom/server';
+import prettierHtml from 'prettier/parser-html';
+import prettier from 'prettier/standalone';
 
 const renderHtml = function(component) {
   return prettier.format(ReactDomServer.renderToStaticMarkup(component).
