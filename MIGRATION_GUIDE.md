@@ -1,5 +1,37 @@
 # Migration Guide
 
+## 1.1.0 → 2.0.0
+1. Upgrade all your dependencies `$ yarn upgrade-interactive --latest`
+2. ```$ yarn remove webpack-cli @svgr/webpack``` 
+3. ```$ yarn add clsx glob``` 
+4. ```$ yarn add -D storybook @storybook/addon-interactions @storybook/manager-api @storybook/blocks @storybook/testing-library @storybook/react-vite rollup @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-terser @vitejs/plugin-react```
+5. Replace the the following scripts with their updated versions:
+```json
+    "tailwind:build": "export NODE_ENV=production && npx tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --minify",
+    "tailwind:start": "npx tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --watch",
+    "storybook:start": "storybook dev --no-open -p 6006",
+    "storybook:build": "storybook build",
+    "modules:build": "rollup --config",
+    "build": "yarn build:assets",
+    "build:styleguide": "yarn build:assets && yarn storybook:build",
+```
+6. Add the following script:
+```json
+    "build:assets": "yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli add public/ > public/tl-styleguide-assets.zip",
+```
+7. Replace the content of your `.storybook/preview.js` files with the content from [this file](https://github.com/frontend/storybox/blob/2023-updates/.storybook/preview.js)
+8. Replace the content of your `.storybook/main.js` files with the content from [this file](https://github.com/frontend/storybox/blob/2023-updates/.storybook/main.js)
+9. Replace the content of your `.storybook/preview-head.html` file with the following:
+````html
+<link rel="stylesheet" href="/css/styles.css" />
+````
+
+#### Refactoring your components
+
+1. Refactor your `[component].stories.tsx` file in the style of [the Blank component](https://github.com/frontend/storybox/blob/main/src/components/atoms/Blank/Blank.stories.tsx) 
+2. Add a `[component].mdx` file in the same level as the `.stories.tsx` file.
+3. This file will serve as the documentation of the component, you can take a look at this file to get an example of how to document your component: [Blank.mdx](https://github.com/frontend/storybox/blob/main/src/components/atoms/Blank/Blank.mdx)
+
 ## 1.0.3 → 1.1.0
 1. Add the new `"modules:start": "webpack --watch",` NPM script
 2. Remove `postcss-nested` dependencies

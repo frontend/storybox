@@ -17,9 +17,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/**
- * This is a blank component
- */
 export const Default: Story = {
   args: {
     active: false,

@@ -9,16 +9,16 @@ const cwd = process.cwd();
 
 console.log('Copying file...');
 
-fs.copySync(`${srcd}/.storybook`, `${cwd}/test-storybox-npm/.storybook`);
-fs.copySync(`${srcd}/src`, `${cwd}/test-storybox-npm/src`);
-fs.copySync(`${srcd}/rollup.config.js`, `${cwd}/test-storybox-npm/rollup.config.js`);
-fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/test-storybox-npm/tsconfig.json`);
-fs.copySync(`${srcd}/tsconfig.eslint.json`, `${cwd}/test-storybox-npm/tsconfig.eslint.json`);
-fs.copySync(`${srcd}/tailwind.config.js`, `${cwd}/test-storybox-npm/tailwind.config.js`);
-fs.copySync(`${srcd}/postcss.config.js`, `${cwd}/test-storybox-npm/postcss.config.js`);
-fs.copySync(`${srcd}/package.tpl.json`, `${cwd}/test-storybox-npm/package.json`);
+fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
+fs.copySync(`${srcd}/src`, `${cwd}/src`);
+fs.copySync(`${srcd}/rollup.config.js`, `${cwd}/rollup.config.js`);
+fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
+fs.copySync(`${srcd}/tsconfig.eslint.json`, `${cwd}/tsconfig.eslint.json`);
+fs.copySync(`${srcd}/tailwind.config.js`, `${cwd}/tailwind.config.js`);
+fs.copySync(`${srcd}/postcss.config.js`, `${cwd}/postcss.config.js`);
+fs.copySync(`${srcd}/package.tpl.json`, `${cwd}/package.json`);
 
-fs.writeFileSync(`${cwd}/test-storybox-npm/.gitignore`, `
+fs.writeFileSync(`${cwd}/.gitignore`, `
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
