@@ -1,0 +1,51 @@
+import { Source, Meta, Title, Primary, Controls, Stories } from '@storybook/blocks';
+import config from './config';
+
+<Meta isTemplate />
+
+<Title />
+
+## Configuration
+
+In order to provide the most adapted size to each device on each context, we create the following example based on those widths:
+
+<Source language="JSON" code={JSON.stringify(config, undefined, 2)} />
+
+There are 4 classes available to crop the image via css. You can add them next to the `.picture` class:
+<Source language="plain" code={`
+original         →    .picture-original (keeps the original ratio)
+16/9             →    .picture-16x9
+5/4              →    .picture-3x2
+square (1/1)     →    .picture-1x1
+`} />
+
+⚠️ Also don't forget to set the `alt` and `sizes` attributes to make your image accessible and optimized.
+
+## Generating the placeholders
+
+In order to generate the placeholders, we use [ImageMagick](https://imagemagick.org/). You can [install it](https://imagemagick.org/script/download.php) via homebrew:
+
+<Source language="bash" dark code={`
+brew install imagemagick
+`} />
+
+Then you can run the following command to generate the placeholders:
+
+<Source language="bash" dark code={`
+yarn images:build
+`} />
+
+This will take all your `*.jpg` files from `src/assets/placeholders` and generate placeholders inside `public/placeholders`.
+
+<Primary />
+
+The component accepts the following inputs (props):
+
+<Controls />
+
+
+## All Variations
+
+Listed below are all the variations of this component.
+
+<Stories />

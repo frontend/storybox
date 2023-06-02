@@ -1,8 +1,53 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Source } from '@storybook/blocks';
 
 <Meta title="Installation" />
 
 
 # Installation
 
-Hello there
+Fulfil the following steps to use the styleguide in your project:
+
+## Download the assets
+
+First, you'll need to download the assets. You can choose between:
+- *Assets related to the current state of this particular styleguide's instance* → [/styleguide-assets.zip](/styleguide-assets.zip)
+
+Inside the ZIP archive, you will find the following folders:
+
+```
+├── css               → Contains the CSS files
+├── icons             → Contains the icons sprite
+├── javascript        → Contains the JavaScript modules
+├── public            → Contains all the other assets
+```
+
+## Install in your project
+
+- **Place the content** of the `styleguide-assets.zip` in your project and link the necessary assets to your site like:
+
+<Source language="html" dark code={`
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <title>[SITE TITLE HERE]</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 👇 To load the CSS 👇 -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    [👉 PAGE CONTENT HERE 👈]
+    <!-- 👇 To load the JS module WHEN needed 👇 -->
+    <script type="text/javascript" src="test-module.bundle.js"></script>
+  </body>
+  </html>
+`}/>
+
+- Don't forget to add all the necessary JavaScript modules to your project.
+
+- If you want to use the **icon system**, follow the instruction of the [Icon component page](/docs/atoms-icon--documentation).
+
+- **Copy/paste HTML** directly from any component/page documentation by pressing the copy button at the bottom of the code block:
+
+

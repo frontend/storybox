@@ -22,10 +22,33 @@ const preview: Preview = {
         useTabs: false,
       },
     },
+    previewTabs: {
+      "storybook/docs/panel": {
+        index: -1,
+      },
+    },
     docs: {
+      components: {
+        ol: ({ children }) => (<ol className="list-decimal">{children}</ol>),
+      },
       transformSource: function(src, storyContext) {
         const component = createElement(storyContext.component, storyContext.initialArgs);
         return renderHtml(component);
+      },
+    },
+    options: {
+      storySort: {
+        order: [
+          'Introduction',
+          'Installation',
+          'Contribution',
+          'Changelog',
+          'Docs',
+          "Atoms",
+          "Navigation",
+          "Content",
+          "Pages",
+        ],
       },
     },
     controls: {

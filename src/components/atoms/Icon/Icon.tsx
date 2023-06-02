@@ -22,7 +22,7 @@ export type IconProps = {
 const Icon = ({ name = 'home', className, ...props }: IconProps): JSX.Element => (
   <ComponentWrapper name="Icon">
     <svg aria-hidden="true" className={clsx('icon', className)} {...props}>
-      <use href={`icons.svg#${name}`} />
+      <use href={`/icons/icons.svg#${name}`} />
     </svg>
   </ComponentWrapper>
 );

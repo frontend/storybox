@@ -1,0 +1,18 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import resolveConfig from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../tailwind.config.js';
+
+<Meta title="Docs/Colors" />
+
+
+# Colors
+
+<ColorPalette>
+  {Object.entries(resolveConfig(tailwindConfig).theme.colors).map(([key, value]) => (
+    <ColorItem
+      key={key + value}
+      title={key}
+      colors={typeof value === 'string' ? [value] : value}
+      subtitle=""/>
+  ))}
+</ColorPalette>

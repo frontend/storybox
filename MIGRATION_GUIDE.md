@@ -3,7 +3,7 @@
 ## 1.1.0 → 2.0.0
 1. Upgrade all your dependencies `$ yarn upgrade-interactive --latest`
 2. ```$ yarn remove webpack-cli @svgr/webpack``` 
-3. ```$ yarn add clsx glob``` 
+3. ```$ yarn add clsx glob svg-sprite``` 
 4. ```$ yarn add -D storybook @storybook/addon-interactions @storybook/manager-api @storybook/blocks @storybook/testing-library @storybook/react-vite rollup @rollup/plugin-commonjs @rollup/plugin-node-resolve @rollup/plugin-terser @vitejs/plugin-react```
 5. In `./package.json`, replace the following scripts with their updated versions:
 ```json
@@ -18,6 +18,8 @@
 6. Add the following script:
 ```json
     "build:assets": "yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli add public/ > public/tl-styleguide-assets.zip",
+    "icons:build": "svg-sprite -s --symbol-inline --symbol-dest public --symbol-sprite icons.svg src/assets/icons/*.svg",
+    "images:build": "npx zx bin/generate-image.mjs",
 ```
 7. Replace the content of your `.storybook/preview.js` files with the following:
 ```js
