@@ -15,12 +15,11 @@ export const icons: IconNames[] = [
 export type IconProps = {
   name: IconNames;
   className?: string;
-  test?:string
   // eslint-disable-next-line
   [x: string]: any;
 };
 
-const Icon = ({ name = 'home', className, test, ...props }: IconProps): JSX.Element => (
+const Icon = ({ name = 'home', className, ...props }: IconProps): JSX.Element => (
   <ComponentWrapper name="Icon">
     <svg aria-hidden="true" className={clsx('icon', className)} {...props}>
       <use href={`icons.svg#${name}`} />

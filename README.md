@@ -5,7 +5,7 @@
 
 > Storybook-Tailwind distribution for Styleguide projects
 
-*If you're just to lazy to read the README  😏👉 `npx frontend-storybox@latest`*
+*If you're just too lazy to read the README  😏👉 `npx frontend-storybox@latest`*
 
 Currently **provides**:
 - [🌊 Tailwind](https://tailwindcss.com/)

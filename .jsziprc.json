@@ -1,0 +1,13 @@
+{
+  "compressionLevel": 9,
+  "dereferenceLinks": true,
+  "entries": ["public/"],
+  "force": true,
+  "ignoreEntries": [
+    "public/styleguide-assets.zip"
+  ],
+  "mode": "add",
+  "outputEntry": "public/styleguide-assets.zip",
+  "quiet": false,
+  "verbose": false
+}

@@ -22,4 +22,11 @@ type Story = StoryObj<typeof meta>;
  * STORIES
  */
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    docs: {
+      story: {inline: true},
+      canvas: {sourceState: 'shown'},
+    },
+  },
+};
