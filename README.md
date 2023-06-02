@@ -68,6 +68,8 @@ And here are **all the available commands**:
 - `yarn build:assets`: Build all deliverables
 - `yarn build:styleguide`: Build styleguide for deployment
 - `yarn generate`: Generate new component (select `Blank` for ease)
+- `yarn icons:build` : Build the icons sprite
+- `yarn images:build` : Build the placeholders images using ImageMagick
 
 
 ## 📦 Deliver Styleguide
