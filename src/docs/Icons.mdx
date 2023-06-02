@@ -1,0 +1,24 @@
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+
+import Icon, { icons } from '../components/atoms/Icon/Icon';
+
+
+<Meta title="Docs/Icons" parameters={{
+  viewMode: 'docs',
+  previewTabs: {
+    canvas: { hidden: true }
+  },
+}}/>
+
+
+# Icons
+
+Here is the complete list of all available icons. To learn how to use them, check the [Icon component page](/docs/atoms-icon--documentation).
+
+<IconGallery style={{marginTop: 60}}>
+  {icons.map(icon => (
+      <IconItem name={icon}>
+        <Icon name={icon} />
+      </IconItem>
+  ))}
+</IconGallery>

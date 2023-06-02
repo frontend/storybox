@@ -4,7 +4,6 @@
   "version": "2.0.0",
   "description": "Storybook distribution for styleguide as a deliverable",
   "author": "github/frontend",
-  "url": "https://github.com/frontend/storybox",
   "license": "MIT",
   "private": true,
   "storyboxVersion": "2.0.0",
@@ -26,8 +25,9 @@
     "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
     "build": "yarn build:assets",
     "build:styleguide": "yarn build:assets && yarn storybook:build",
-    "build:assets": "yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli add public/ > public/styleguide-assets.zip",
+    "build:assets": "yarn icons:build && yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli add public/ > public/styleguide-assets.zip",
     "generate": "npx generact",
+    "icons:build": "svg-sprite -s --symbol-inline --symbol-dest public --symbol-sprite icons.svg src/assets/icons/*.svg",
     "lint:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0",
     "lint:css": "stylelint 'playground/**/*.css'",
     "fix:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0 --fix",
@@ -101,6 +101,7 @@
     "prop-types": "^15.8.1",
     "rollup": "^3.23.0",
     "storybook": "^7.0.17",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "svg-sprite": "^2.0.2"
   }
 }

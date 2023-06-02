@@ -48,6 +48,7 @@
     "@whitespace/storybook-addon-html": "^5.0.0",
     "concurrently": "^6.5.1",
     "css-loader": "^5.2.6",
+    "svg-sprite": "^2.0.2",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.4",
     "rollup": "^3.23.0",

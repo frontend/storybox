@@ -7,6 +7,9 @@ export type Props = {
   active: boolean;
 };
 
+/**
+ * Primary UI component for user interaction
+ */
 const Blank = ({ active }: Props) => (
   <ComponentWrapper name="Blank">
     <span className={clsx('blank', active && 'blank-active')}>
