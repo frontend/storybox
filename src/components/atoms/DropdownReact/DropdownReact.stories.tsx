@@ -28,7 +28,7 @@ export const Default: Story = {
   },
   parameters: {
     docs: {
-      story: { inline: true },
+      story: { inline: true, height: '200px' },
       canvas: { sourceState: 'shown' },
     },
   },

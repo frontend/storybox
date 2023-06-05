@@ -1,0 +1,27 @@
+import { Story, Canvas, Meta, Title, Primary, Controls, Source } from '@storybook/blocks';
+import * as DropdownAlpine from './DropdownAlpine.stories.tsx';
+
+<Meta isTemplate />
+
+<Title />
+
+Dropdown (alpinejs) is an Alpine widget. To use it in your project, follow these steps:
+
+**1**. Include the styles in the `<head>`:
+
+<Source language="html" dark code={`
+<link rel="stylesheet" href="styles.css">
+`}/>
+
+**2**. Include React and the following bundle before `<body>` tag's closing:
+
+<Source language="html" dark code={`
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="dropdown-alpine.bundle.js"></script>
+`}/>
+
+<Primary />
+
+The component accepts the following inputs (props):
+
+<Controls />

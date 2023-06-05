@@ -1,0 +1,48 @@
+<div>
+  <div
+    x-data="dropdown"
+    x-on:keydown.escape.prevent.stop="close($refs.button)"
+    x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+    x-id="['dropdown-button']"
+    class="relative inline-block text-left"
+  >
+    <!-- Button -->
+    <button
+      x-ref="button"
+      x-on:click="toggle()"
+      :aria-expanded="open"
+      :aria-controls="$id('dropdown-button')"
+      type="button"
+      class="inline-flex justify-center w-full px-3 py-2 text-sm font-semibold text-gray-900 bg-white text-red-400-700 gap-x-1.5 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 [&[aria-expanded='true']>svg]:rotate-180"
+    >
+      My Account
+      <Icon />
+    </button>
+
+    <!-- Panel -->
+    <div
+      x-ref="panel"
+      x-show="open"
+      x-transition.origin.top.left
+      x-on:click.outside="close($refs.button)"
+      :id="$id('dropdown-button')"
+      style="display: none;"
+      role="menu"
+      aria-orientation="vertical"
+      aria-labelledby="menu-button"
+      class="absolute left-0 z-10 w-56 mt-2 bg-white shadow-lg origin-top-right rounded-md ring-1 ring-black ring-opacity-5 focus:outline-none"
+    >
+      <div className="py-1" role="none">
+        <a href="#" class='block px-4 py-2 text-sm bg-gray-100 text-gray-900'>
+          Profile
+        </a>
+        <a href="#" class='block px-4 py-2 text-sm text-gray-700'>
+          Settings
+        </a>
+        <a href="#" class='block px-4 py-2 text-sm text-gray-700'>
+          Logout
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

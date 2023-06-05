@@ -6,7 +6,7 @@ import { globSync } from 'glob';
 
 export default globSync('./src/modules/*.{ts,js,tsx,jsx}').map(file => ({
   input: file,
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'alpinejs'],
   output: {
     compact: true,
     sourcemap: true,
@@ -16,6 +16,7 @@ export default globSync('./src/modules/*.{ts,js,tsx,jsx}').map(file => ({
     globals: {
       react: 'React',
       'react-dom': 'ReactDOM',
+      alpinejs: 'Alpine',
     },
     inlineDynamicImports: true,
   },

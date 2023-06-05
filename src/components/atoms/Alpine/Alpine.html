@@ -1,8 +1,0 @@
-<div x-data>
-  <h1 x-text="$store.darkMode.message"></h1>
-  <button @click="$store.darkMode.toggle()">Toggle Dark Mode</button>
-  <div :class="!$store.darkMode.on && 'bg-black'">
-    Hello there!
-    <Blank />
-  </div>
-</div>
