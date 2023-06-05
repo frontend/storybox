@@ -12,8 +12,10 @@ const script = () => {
     });
   });
 
-  window.Alpine = Alpine;
-  Alpine.start();
+  if (window.Alpine === undefined) {
+    window.Alpine = Alpine;
+    Alpine.start();
+  }
 };
 
 export default script;
