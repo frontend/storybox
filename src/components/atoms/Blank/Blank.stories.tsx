@@ -17,14 +17,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+/*
+ * STORIES
+ */
+
 export const Default: Story = {
   args: {
     active: false,
   },
   parameters: {
     docs: {
-      story: { inline: true }, // render the story in an iframe
-      canvas: { sourceState: 'shown' }, // start with the source open
+      story: { inline: true },
+      canvas: { sourceState: 'shown' },
     },
   },
 };

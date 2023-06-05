@@ -1,0 +1,27 @@
+picture {
+  @apply block rounded;
+}
+
+img {
+  @apply w-full;
+}
+
+.picture-original {
+  @apply aspect-auto;
+}
+
+.picture-16x9 {
+  @apply aspect-video;
+}
+
+.picture-3x2 {
+  @apply aspect-[5/4];
+}
+
+.picture-3x2 {
+  @apply aspect-[3/2];
+}
+
+.picture-1x1 {
+  @apply aspect-square;
+}

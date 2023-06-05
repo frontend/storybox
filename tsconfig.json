@@ -19,7 +19,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "es5",
-    "outDir": "./build/"
+    "outDir": "./public/javascript/"
   },
   "include": [
     "src/**/*.ts",

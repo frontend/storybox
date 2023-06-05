@@ -2,3 +2,5 @@
 
 /* ATOMS */
 @import "../components/atoms/Blank/Blank.css";
+@import "../components/atoms/Icon/Icon.css";
+@import "../components/atoms/Picture/Picture.css";

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - refactor using vite and storybook v7
+- change icons system using svg-sprite
+- update to the documentation pages
 
 ## [1.1.1] - 2022-06-16
 ### Fixed

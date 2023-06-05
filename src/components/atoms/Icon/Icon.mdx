@@ -1,0 +1,22 @@
+import { Story, Canvas, Meta, Title, Primary, Controls, Stories } from '@storybook/blocks';
+import * as Icon from './Icon.stories.tsx';
+
+<Meta isTemplate />
+
+<Title />
+
+Icons can be used in various other components.
+
+To use a particular icon, you need to enter its name inside the `href`, e.g. for the `home` icon:
+
+
+<Primary />
+
+For accessibility reasons, the icons are hidden from screen readers by the `aria-hidden="true"` attribute.
+It is therefore necessary to ensure that the component has a meaning with labels, texts, etc.
+
+To see the complete list of all available icons, check the [Icons doc page](/docs/docs-icons--documentation).
+
+The component accepts the following inputs (props):
+
+<Controls />

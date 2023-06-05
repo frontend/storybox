@@ -1,11 +1,8 @@
-> **Warning**
-> This project is temporarily outdated. Updates will come soon 🤞
-
 # 📚 Storybox
 
 > Storybook-Tailwind distribution for Styleguide projects
 
-*If you're just to lazy to read the README  😏👉 `npx frontend-storybox@latest`*
+*If you're just too lazy to read the README  😏👉 `npx frontend-storybox@latest`*
 
 Currently **provides**:
 - [🌊 Tailwind](https://tailwindcss.com/)
@@ -65,12 +62,15 @@ And here are **all the available commands**:
 - `yarn tailwind:start`: Start Tailwind development mode 
 - `yarn storybook:start`: Start Storybook
 - `yarn storybook:build`: Build Storybook static deliverable
-- `yarn modules:build`: Build React modules
+- `yarn modules:start`: Build modules and watch for changes
+- `yarn modules:build`: Build modules
 - `yarn start`: Start all development processes
 - `yarn build`: Build all deliverables
 - `yarn build:assets`: Build all deliverables
 - `yarn build:styleguide`: Build styleguide for deployment
 - `yarn generate`: Generate new component (select `Blank` for ease)
+- `yarn icons:build` : Build the icons sprite
+- `yarn images:build` : Build the placeholders images using ImageMagick
 
 
 ## 📦 Deliver Styleguide

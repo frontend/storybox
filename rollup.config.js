@@ -1,16 +1,23 @@
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 import { globSync } from 'glob';
 
-export default {
-  input: globSync('./src/modules/*.{ts,js}'),
+export default globSync('./src/modules/*.{ts,js,tsx,jsx}').map(file => ({
+  input: file,
   external: ['react', 'react-dom'],
   output: {
     compact: true,
-    format: 'cjs',
+    sourcemap: true,
+    format: 'iife',
     dir: 'public/javascript',
     entryFileNames: '[name].bundle.js',
+    globals: {
+      react: 'React',
+      'react-dom': 'ReactDOM',
+    },
+    inlineDynamicImports: true,
   },
   plugins: [
     terser(),
@@ -19,5 +26,6 @@ export default {
       include: /node_modules/,
       requireReturnsDefault: 'auto',
     }),
+    typescript(),
   ],
-};
+}));
