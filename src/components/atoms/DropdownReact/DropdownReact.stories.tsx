@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Icon from './Icon';
-import doc from './Icon.mdx';
+import DropdownReact from './DropdownReact';
+import doc from './DropdownReact.mdx';
 
 const meta = {
-  title: 'Atoms/Icon',
-  component: Icon,
+  title: 'Atoms/Dropdown React',
+  component: DropdownReact,
   tags: ['autodocs'],
   parameters: {
     docs: {
       page: doc,
     },
   },
-} satisfies Meta<typeof Icon>;
+} satisfies Meta<typeof DropdownReact>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -22,6 +22,10 @@ type Story = StoryObj<typeof meta>;
  */
 
 export const Default: Story = {
+  args: {
+    options: ['Profile', 'Settings', 'Logout'],
+    placeholder: 'My account',
+  },
   parameters: {
     docs: {
       story: { inline: true },

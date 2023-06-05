@@ -62,7 +62,8 @@ And here are **all the available commands**:
 - `yarn tailwind:start`: Start Tailwind development mode 
 - `yarn storybook:start`: Start Storybook
 - `yarn storybook:build`: Build Storybook static deliverable
-- `yarn modules:build`: Build React modules
+- `yarn modules:start`: Build modules and watch for changes
+- `yarn modules:build`: Build modules
 - `yarn start`: Start all development processes
 - `yarn build`: Build all deliverables
 - `yarn build:assets`: Build all deliverables

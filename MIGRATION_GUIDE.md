@@ -90,9 +90,9 @@ const config: StorybookConfig = {
 export default config;
 
 ```
-9. Replace the content of your `.storybook/preview-head.html` file with the following:
-````html
-<link rel="stylesheet" href="/css/styles.css" />
+9. Remove `styles.css` from the content of your `.storybook/preview-head.html` and import theme directly into `.storybook/preview.tsx` like
+````ts
+import '../public/css/styles.css';
 ````
 
 ### Refactoring your components

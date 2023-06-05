@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     "@storybook/theming",
     "@storybook/manager-api",
   ],
+  staticDirs: ['../public'],
   framework: {
     name: "@storybook/react-vite",
     options: {},

@@ -4,6 +4,8 @@ import * as ReactDomServer from 'react-dom/server';
 import * as prettierHtml from 'prettier/parser-html';
 import * as prettier from 'prettier/standalone';
 
+import '../public/css/styles.css';
+
 const renderHtml = function(component) {
   return prettier.format(ReactDomServer.renderToStaticMarkup(component).
       replace(/<script><\/script>/g, ''), {
@@ -38,16 +40,17 @@ const preview: Preview = {
     },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: [
           'Introduction',
           'Installation',
           'Contribution',
           'Changelog',
           'Docs',
-          "Atoms",
-          "Navigation",
-          "Content",
-          "Pages",
+          'Atoms',
+          'Navigation',
+          'Content',
+          'Pages',
         ],
       },
     },

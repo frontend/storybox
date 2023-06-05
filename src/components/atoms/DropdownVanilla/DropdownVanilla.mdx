@@ -1,0 +1,30 @@
+import { Story, Canvas, Meta, Title, Primary, Controls, Source } from '@storybook/blocks';
+import * as DropdownVanilla from './DropdownVanilla.stories.tsx';
+
+<Meta isTemplate />
+
+<Title />
+
+Dropdown (vanilla) is a zero-dependency JavaScript widget. To use it in your project, follow these steps:
+
+**1**. Include the styles in the `<head>`:
+
+<Source language="html" dark code={`
+<link rel="stylesheet" href="styles.css">
+`}/>
+
+**2**. Include the following bundle before `<body>` tag's closing:
+
+<Source language="html" dark code={`
+<script src="dropdown-vanilla.bundle.js"></script>
+`}/>
+
+**3**. Use it like so:
+
+<Primary />
+
+The component accepts the following inputs (props):
+
+<Controls />
+
+

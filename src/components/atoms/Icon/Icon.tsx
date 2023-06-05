@@ -4,12 +4,20 @@ import clsx from 'clsx';
 import { ComponentWrapper } from '../../storybook/HtmlComment';
 
 export type IconNames =
+  | 'chevron-left'
+  | 'chevron-right'
+  | 'chevron-up'
+  | 'chevron-down'
   | 'home'
-  | 'external'
+  | 'external';
 
 export const icons: IconNames[] = [
+  'chevron-left',
+  'chevron-right',
+  'chevron-up',
+  'chevron-down',
   'home',
-  'external'
+  'external',
 ];
 
 export type IconProps = {
@@ -19,7 +27,11 @@ export type IconProps = {
   [x: string]: any;
 };
 
-const Icon = ({ name = 'home', className, ...props }: IconProps): JSX.Element => (
+const Icon = ({
+  name = 'home',
+  className,
+  ...props
+}: IconProps): JSX.Element => (
   <ComponentWrapper name="Icon">
     <svg aria-hidden="true" className={clsx('icon', className)} {...props}>
       <use href={`/icons/icons.svg#${name}`} />
