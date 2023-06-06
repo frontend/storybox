@@ -15,6 +15,7 @@ fs.copySync(`${srcd}/.storybook`, `${cwd}/.storybook`);
 fs.copySync(`${srcd}/src`, `${cwd}/src`);
 fs.copySync(`${srcd}/bin`, `${cwd}/bin`);
 fs.copySync(`${srcd}/public`, `${cwd}/public`);
+fs.copySync(`${srcd}/.jsziprc.json`, `${cwd}/.jsziprc.json`);
 fs.copySync(`${srcd}/rollup.config.js`, `${cwd}/rollup.config.js`);
 fs.copySync(`${srcd}/tsconfig.json`, `${cwd}/tsconfig.json`);
 fs.copySync(`${srcd}/tsconfig.eslint.json`, `${cwd}/tsconfig.eslint.json`);
