@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - change icons system using svg-sprite
 - update to the documentation pages
 
+### Added
+- Add Alpine.js integration
+
 ## [1.1.1] - 2022-06-16
 ### Fixed
 - Fix package.json wrong version by @nelsonreitz
