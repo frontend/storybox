@@ -1,31 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import DropdownVanilla from './DropdownVanilla';
-import doc from './DropdownVanilla.mdx';
+import DropdownAlpine from './DropdownAlpine';
+import doc from './DropdownAlpine.mdx';
 
 const meta = {
-  title: 'Atoms/Dropdown Vanilla',
-  component: DropdownVanilla,
+  title: 'Atoms/Dropdown Alpine',
+  component: DropdownAlpine,
   tags: ['autodocs'],
   parameters: {
     docs: {
       page: doc,
     },
   },
-} satisfies Meta<typeof DropdownVanilla>;
+} satisfies Meta<typeof DropdownAlpine>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/*
- * STORIES
+/**
+ * This is a blank component
  */
-
 export const Default: Story = {
-  args: {
-    options: ['Profile', 'Settings', 'Logout'],
-    placeholder: 'My account',
-  },
+  args: {},
   parameters: {
     docs: {
       story: { inline: true, height: '200px' },
