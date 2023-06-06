@@ -1,6 +1,6 @@
 import { AlpineComponent } from 'alpinejs';
 
-const data = {
+const data = () => ({
   open: false,
 
   // eslint-disable-next-line consistent-return
@@ -17,6 +17,6 @@ const data = {
     this.open = false;
     if (focusAfter) focusAfter.focus();
   },
-};
+});
 
 export default data;
