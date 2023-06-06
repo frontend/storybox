@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-const fs = require('fs-extra');
-const path = require('path');
-const { exec } = require("child_process");
+import fs from 'fs-extra';
+import path from 'path';
+import { exec } from 'child_process';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
 const srcd = path.join(path.dirname(__filename), '..');
 const cwd = process.cwd();
 
@@ -49,4 +51,4 @@ yarn-error.log*
 exec('yarn', () => {
   console.log('✅ Achieved with success!');
 });
-  
+
