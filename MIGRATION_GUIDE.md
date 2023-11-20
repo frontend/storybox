@@ -47,10 +47,12 @@ const preview = {
          },
       },
       docs: {
-         transformSource: function(src, storyContext) {
+        source: {
+          transform: function(src, storyContext) {
             const component = createElement(storyContext.component, storyContext.initialArgs);
             return renderHtml(component);
-         },
+          },
+        },
       },
       controls: {
          matchers: {

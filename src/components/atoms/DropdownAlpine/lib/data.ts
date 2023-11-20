@@ -6,9 +6,9 @@ const data = () => ({
   // eslint-disable-next-line consistent-return
   toggle() {
     if (this.open) {
-      return (this as AlpineComponent).close();
+      return (this as AlpineComponent<any>).close();
     }
-    (this as AlpineComponent).$refs.button.focus();
+    (this as AlpineComponent<any>).$refs.button.focus();
     this.open = true;
   },
 

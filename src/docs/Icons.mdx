@@ -11,7 +11,7 @@ Here is the complete list of all available icons. To learn how to use them, chec
 
 <IconGallery style={{marginTop: 60}}>
   {icons.map(icon => (
-      <IconItem name={icon}>
+      <IconItem name={icon} key={icon}>
         <Icon name={icon} />
       </IconItem>
   ))}
