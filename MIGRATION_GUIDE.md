@@ -1,5 +1,21 @@
 # Migration Guide
 
+## 2.0.0 → [unreleased]
+1. Upgrade all your dependencies `$ yarn upgrade-interactive --latest` (**🚨 do NOT upgrade Prettier to >=3.0.0**, the `prettier.format` method used in preview.tsx became async, and storybook doesn't support async functions inside `source.transform`)
+2. Inside `.storybook/preview.tsx`, refactor `docs.transformSource` into `docs.source.transform`:
+```js
+    source: {
+      transform: function(src, storyContext) {
+        const component = createElement(storyContext.component, storyContext.initialArgs);
+        return renderHtml(component);
+      },
+    },
+```
+3. In `Blank.mdx`, refactor the deprecated `<Canvas>` by the following:
+```js
+<Canvas of={Blank.Default} />
+```
+
 ## 1.1.0 → 2.0.0
 1. Upgrade all your dependencies `$ yarn upgrade-interactive --latest`
 2. ```$ yarn remove webpack-cli @svgr/webpack``` 
