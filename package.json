@@ -30,7 +30,7 @@
     "modules:build": "rollup --config",
     "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
     "build": "yarn build:assets",
-    "build:assets": "yarn icons:build && yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli -c .jsziprc.json",
+    "build:assets": "yarn icons:build && yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli@3.5.1 -c .jsziprc.json",
     "build:styleguide": "yarn build:assets && yarn storybook:build",
     "generate": "npx generact",
     "lint:js": "eslint --ext js,jsx,ts,tsx ./ --max-warnings=0",
