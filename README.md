@@ -43,7 +43,7 @@ You need to have the following tools installed globally on your environment:
 To install the project:
 
 ```bash
-bun install
+bun install -y
 ```
 
 

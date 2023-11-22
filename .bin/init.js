@@ -49,9 +49,10 @@ fs.writeFileSync(`${cwd}/.gitignore`, `
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+bun.lockb
 `);
 
-exec('yarn', () => {
+exec('bun install -y', () => {
   console.log('✅ Achieved with success!');
 });
 
