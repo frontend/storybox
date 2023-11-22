@@ -33,44 +33,51 @@ $ npx antistatique-frontend@latest # Uncheck storybook and check stylelint, obvi
 $ git checkout tsconfig.json
 ```
 
-## 🔧 Requirements
+## 🔧 Installation
 
 You need to have the following tools installed globally on your environment:
 
 - [📗 NodeJS >= 16](https://nodejs.org/en/) - JavaScript runtime used to build and run the project
-- [🐈 Yarn >= 1.22](https://yarnpkg.com/lang/en/) - Dependency manager built on top of the NPM registry
+- [🥟 Bun >= 1.0.13](https://bun.sh/) - Dependency manager
+
+To install the project:
+
+```bash
+bun install
+```
+
 
 ## 🏁 Run the Project
 
 Start the following commands **in parallel** (with nicer output):
 
 ```bash
-$ yarn tailwind:start
-$ yarn storybook:start
+$ npm run tailwind:start
+$ npm run storybook:start
 ```
 
 **OR** (with uglier output)
 
 ```bash
-$ yarn start
+$ npm run start
 ```
 
 And here are **all the available commands**:
 
-- `yarn clean`: Purge build packages cache
-- `yarn tailwind:build`: Build Production Tailwind project
-- `yarn tailwind:start`: Start Tailwind development mode 
-- `yarn storybook:start`: Start Storybook
-- `yarn storybook:build`: Build Storybook static deliverable
-- `yarn modules:start`: Build modules and watch for changes
-- `yarn modules:build`: Build modules
-- `yarn start`: Start all development processes
-- `yarn build`: Build all deliverables
-- `yarn build:assets`: Build all deliverables
-- `yarn build:styleguide`: Build styleguide for deployment
-- `yarn generate`: Generate new component (select `Blank` for ease)
-- `yarn icons:build` : Build the icons sprite
-- `yarn images:build` : Build the placeholders images using ImageMagick
+- `npm run clean`: Purge build packages cache
+- `npm run tailwind:build`: Build Production Tailwind project
+- `npm run tailwind:start`: Start Tailwind development mode 
+- `npm run storybook:start`: Start Storybook
+- `npm run storybook:build`: Build Storybook static deliverable
+- `npm run modules:start`: Build modules and watch for changes
+- `npm run modules:build`: Build modules
+- `npm run start`: Start all development processes
+- `npm run build`: Build all deliverables
+- `npm run build:assets`: Build all deliverables
+- `npm run build:styleguide`: Build styleguide for deployment
+- `npm run generate`: Generate new component (select `Blank` for ease)
+- `npm run icons:build` : Build the icons sprite
+- `npm run images:build` : Build the placeholders images using ImageMagick
 
 
 ## 📦 Deliver Styleguide
@@ -78,7 +85,7 @@ And here are **all the available commands**:
 To deliver your styleguide, simply hit the following command:
 
 ```bash
-$ yarn build
+$ npm run build
 ```
 
 In `./public`, it will output you a `CSS` folder that includes a `styles.css` with your custom CSS and the *purged Tailwind utilities.
@@ -92,5 +99,5 @@ It will also take all the modules available in `./src/modules/` and create indep
 You can easily (and freely) **deploy your styleguide on Netlify**.
 
 Choose the following **options**:
-- Build command: `yarn build:styleguide`
+- Build command: `npm run build:styleguide`
 - Publish directory: `storybook-static/`

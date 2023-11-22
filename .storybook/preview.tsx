@@ -33,9 +33,11 @@ const preview: Preview = {
       components: {
         ol: ({ children }) => (<ol className="list-decimal">{children}</ol>),
       },
-      transformSource: function(src, storyContext) {
-        const component = createElement(storyContext.component, storyContext.initialArgs);
-        return renderHtml(component);
+      source: {
+        transform: function(src, storyContext) {
+          const component = createElement(storyContext.component, storyContext.initialArgs);
+          return renderHtml(component);
+        },
       },
     },
     options: {
