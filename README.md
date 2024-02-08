@@ -2,7 +2,7 @@
 
 > Storybook-Tailwind distribution for Styleguide projects
 
-*If you're just too lazy to read the README  😏👉 `npx frontend-storybox@latest`*
+*If you're just too lazy to read the README  😏👉 `bun x frontend-storybox@latest`*
 
 Currently **provides**:
 - [🌊 Tailwind](https://tailwindcss.com/)
@@ -21,7 +21,7 @@ First you need to **kick off the generator**:
 
 ```bash
 $ mkdir new-styleguide && cd new-styleguide
-$ npx frontend-storybox@latest
+$ bun x frontend-storybox@latest
 ```
 
 If you want a good ESLint/Prettier/Cypress/Jest config, you can use the [Antistatique Frontend Development Configuration](https://github.com/antistatique/frontend-development-configuration) as so:
@@ -29,7 +29,7 @@ If you want a good ESLint/Prettier/Cypress/Jest config, you can use the [Antista
 ⚠️ Make sure everything has been added/commited before doing this
 
 ```bash
-$ npx antistatique-frontend@latest # Uncheck storybook and check stylelint, obviously
+$ bun x antistatique-frontend@latest # Uncheck storybook and check stylelint, obviously
 $ git checkout tsconfig.json
 ```
 
@@ -37,8 +37,7 @@ $ git checkout tsconfig.json
 
 You need to have the following tools installed globally on your environment:
 
-- [📗 NodeJS >= 16](https://nodejs.org/en/) - JavaScript runtime used to build and run the project
-- [🥟 Bun >= 1.0.13](https://bun.sh/) - Dependency manager
+- [🥟 Bun >= 1.0.13](https://bun.sh/) - Runtime & Dependency manager
 
 To install the project:
 

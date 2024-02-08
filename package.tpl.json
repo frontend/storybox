@@ -6,27 +6,24 @@
   "description": "A brand new styleguide project",
   "author": "you",
   "type": "module",
-  "engines": {
-    "node": ">=16"
-  },
   "chan": {
     "release-prefix": ""
   },
   "scripts": {
     "clean": "rm -rf node_modules/.cache",
     "icons:build": "svg-sprite -s --symbol-inline --symbol-dest public/icons --symbol-sprite icons.svg src/assets/icons/*.svg",
-    "images:build": "npx zx bin/generate-image.mjs",
-    "tailwind:build": "export NODE_ENV=production && npx tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --minify",
-    "tailwind:start": "npx tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --watch",
-    "storybook:start": "yarn run clean && storybook dev --no-open -p 6006",
+    "images:build": "bun x zx bin/generate-image.mjs",
+    "tailwind:build": "export NODE_ENV=production && bun x tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --minify",
+    "tailwind:start": "bun x tailwindcss -i ./src/styles/base.css -o ./public/css/styles.css --watch",
+    "storybook:start": "npm run clean && storybook dev --no-open -p 6006",
     "storybook:build": "storybook build",
     "modules:start": "rollup --config --watch",
     "modules:build": "rollup --config",
-    "start": "concurrently \"yarn tailwind:start\" \"yarn storybook:start\"",
-    "build": "yarn build:assets",
-    "build:assets": "yarn icons:build && yarn tailwind:build && yarn modules:build && npx @ffflorian/jszip-cli -c .jsziprc.json",
-    "build:styleguide": "yarn build:assets && yarn storybook:build",
-    "generate": "npx generact"
+    "start": "concurrently \"npm run tailwind:start\" \"npm run storybook:start\"",
+    "build": "npm run build:assets",
+    "build:assets": "npm run icons:build && npm run tailwind:build && npm run modules:build && bun x @ffflorian/jszip-cli -c .jsziprc.json",
+    "build:styleguide": "npm run build:assets && npm run storybook:build",
+    "generate": "bun x generact"
   },
   "dependencies": {
     "alpinejs": "^3.12.2",

@@ -22,7 +22,7 @@ First you need to **kick off the generator**:
 
 ```bash
 $ mkdir new-styleguide && cd new-styleguide
-$ npx frontend-storybox@latest
+$ bun x frontend-storybox@latest
 ```
 
 If you want a good ESLint/Prettier/Cypress/Jest config, you can use the [Antistatique Frontend Development Configuration](https://github.com/antistatique/frontend-development-configuration) as so:
@@ -30,7 +30,7 @@ If you want a good ESLint/Prettier/Cypress/Jest config, you can use the [Antista
 ⚠️ Make sure everything has been added/commited before doing this
 
 ```bash
-$ npx antistatique-frontend@latest # Uncheck storybook and check stylelint, obviously
+$ bun x antistatique-frontend@latest # Uncheck storybook and check stylelint, obviously
 $ git checkout tsconfig.json
 ```
 
@@ -38,37 +38,36 @@ $ git checkout tsconfig.json
 
 You need to have the following tools installed globally on your environment:
 
-- [📗 NodeJS >= 16](https://nodejs.org/en/) - JavaScript runtime used to build and run the project
-- [🐈 Yarn >= 1.22](https://yarnpkg.com/lang/en/) - Dependency manager built on top of the NPM registry
+- [🥟 Bun >= 1.0.13](https://bun.sh/) - Runtime & Dependency manager
 
 ## 🏁 Run the Project
 
 Start the following commands **in parallel** (with nicer output):
 
 ```bash
-$ yarn tailwind:start
-$ yarn storybook:start
+$ bun run tailwind:start
+$ bun run storybook:start
 ```
 
 **OR** (with uglier output)
 
 ```bash
-$ yarn start
+$ bun run start
 ```
 
 And here are **all the available commands**:
 
-- `yarn clean`: Purge build packages cache
-- `yarn tailwind:build`: Build Production Tailwind project
-- `yarn tailwind:start`: Start Tailwind development mode
-- `yarn storybook:start`: Start Storybook
-- `yarn storybook:build`: Build Storybook static deliverable
-- `yarn modules:build`: Build React modules
-- `yarn start`: Start all development processes
-- `yarn build`: Build all deliverables
-- `yarn build:assets`: Build all deliverables
-- `yarn build:styleguide`: Build styleguide for deployment
-- `yarn generate`: Generate new component (select `Blank` for ease)
+- `bun run clean`: Purge build packages cache
+- `bun run tailwind:build`: Build Production Tailwind project
+- `bun run tailwind:start`: Start Tailwind development mode
+- `bun run storybook:start`: Start Storybook
+- `bun run storybook:build`: Build Storybook static deliverable
+- `bun run modules:build`: Build React modules
+- `bun run start`: Start all development processes
+- `bun run build`: Build all deliverables
+- `bun run build:assets`: Build all deliverables
+- `bun run build:styleguide`: Build styleguide for deployment
+- `bun run generate`: Generate new component (select `Blank` for ease)
 
 
 ## 📦 Deliver Styleguide
@@ -76,7 +75,7 @@ And here are **all the available commands**:
 To deliver your styleguide, simply hit the following command:
 
 ```bash
-$ yarn build
+$ bun run build
 ```
 
 In `./public`, it will output you a `CSS` folder that includes a `styles.css` with your custom CSS and the *purged Tailwind utilities.
@@ -90,5 +89,5 @@ It will also take all the modules available in `./src/modules/` and create indep
 You can easily (and freely) **deploy your styleguide on Netlify**.
 
 Choose the following **options**:
-- Build command: `yarn build:styleguide`
+- Build command: `bun run build:styleguide`
 - Publish directory: `storybook-static/`
