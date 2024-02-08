@@ -51,32 +51,32 @@ bun install -y
 Start the following commands **in parallel** (with nicer output):
 
 ```bash
-$ npm run tailwind:start
-$ npm run storybook:start
+$ bun run tailwind:start
+$ bun run storybook:start
 ```
 
 **OR** (with uglier output)
 
 ```bash
-$ npm run start
+$ bun run start
 ```
 
 And here are **all the available commands**:
 
-- `npm run clean`: Purge build packages cache
-- `npm run tailwind:build`: Build Production Tailwind project
-- `npm run tailwind:start`: Start Tailwind development mode 
-- `npm run storybook:start`: Start Storybook
-- `npm run storybook:build`: Build Storybook static deliverable
-- `npm run modules:start`: Build modules and watch for changes
-- `npm run modules:build`: Build modules
-- `npm run start`: Start all development processes
-- `npm run build`: Build all deliverables
-- `npm run build:assets`: Build all deliverables
-- `npm run build:styleguide`: Build styleguide for deployment
-- `npm run generate`: Generate new component (select `Blank` for ease)
-- `npm run icons:build` : Build the icons sprite
-- `npm run images:build` : Build the placeholders images using ImageMagick
+- `bun run clean`: Purge build packages cache
+- `bun run tailwind:build`: Build Production Tailwind project
+- `bun run tailwind:start`: Start Tailwind development mode 
+- `bun run storybook:start`: Start Storybook
+- `bun run storybook:build`: Build Storybook static deliverable
+- `bun run modules:start`: Build modules and watch for changes
+- `bun run modules:build`: Build modules
+- `bun run start`: Start all development processes
+- `bun run build`: Build all deliverables
+- `bun run build:assets`: Build all deliverables
+- `bun run build:styleguide`: Build styleguide for deployment
+- `bun run generate`: Generate new component (select `Blank` for ease)
+- `bun run icons:build` : Build the icons sprite
+- `bun run images:build` : Build the placeholders images using ImageMagick
 
 
 ## 📦 Deliver Styleguide
@@ -84,7 +84,7 @@ And here are **all the available commands**:
 To deliver your styleguide, simply hit the following command:
 
 ```bash
-$ npm run build
+$ bun run build
 ```
 
 In `./public`, it will output you a `CSS` folder that includes a `styles.css` with your custom CSS and the *purged Tailwind utilities.
@@ -98,5 +98,5 @@ It will also take all the modules available in `./src/modules/` and create indep
 You can easily (and freely) **deploy your styleguide on Netlify**.
 
 Choose the following **options**:
-- Build command: `npm run build:styleguide`
+- Build command: `bun run build:styleguide`
 - Publish directory: `storybook-static/`
