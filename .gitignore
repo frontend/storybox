@@ -50,4 +50,3 @@ lerna-debug.log*
 .husky
 .lintstagedrc
 .vscode/
-bun.lockb
